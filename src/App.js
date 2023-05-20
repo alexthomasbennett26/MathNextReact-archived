@@ -1,6 +1,13 @@
+import Editor from "./components/editor";
+
 function App() {
   return (
-    <div>hello</div>
+    <div>
+      <h1>hello</h1>
+      <Editor />
+      <Editor />
+      <Editor />
+    </div>
   );
 }
 
