@@ -1,5 +1,7 @@
-import Editor from "./components/editor";
-import Test from "./components/testcomponent";
+import Editor from "./components/Editor";
+import Test from "./components/Testcomponent";
+import Modal from "./components/Modal";
+import Backdrop from "./components/Backdrop";
 
 function App() {
   return (
@@ -7,8 +9,9 @@ function App() {
       <h1>hello</h1>
       <Editor text='first'/>
       <Editor text='second'/>
-      <Editor text='third'/>
       <Test text='third'/>
+      <Modal/>
+      <Backdrop/>
     </div>
   );
 }

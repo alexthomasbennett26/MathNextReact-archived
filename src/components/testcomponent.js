@@ -1,7 +1,7 @@
 const Test = (props) => {
   
     function newHandler() {
-        console.log('clicked new');
+        
     }
   
     return (
