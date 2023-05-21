@@ -5,7 +5,7 @@ const Modal = () => {
         <input type='text'></input>
         <section className='actions'>
             <button type="submit" className='primarybutton'>Create</button>
-            <button type="" className='tertiarybutton'>Dismiss</button>
+            <button type="" className='tertiarybutton'>Cancel</button>
         </section>
     </div>
   );

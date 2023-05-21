@@ -1,7 +1,5 @@
 import Editor from "./components/Editor";
 import Test from "./components/Testcomponent";
-import Modal from "./components/Modal";
-import Backdrop from "./components/Backdrop";
 
 function App() {
   return (
@@ -10,8 +8,6 @@ function App() {
       <Editor text='first'/>
       <Editor text='second'/>
       <Test text='third'/>
-      <Modal/>
-      <Backdrop/>
     </div>
   );
 }
