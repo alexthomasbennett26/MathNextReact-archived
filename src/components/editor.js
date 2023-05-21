@@ -1,7 +1,10 @@
-function Editor() {
+const Editor = (props) => {
   
-    return (
-    <div>
+
+
+  return (<div>
+    <h3>hi {props.text}</h3>
+    <section>
       <section id="buttonsection">
         <button id="pi-button">π</button>
         <button id="plus-button">+</button>
@@ -20,8 +23,9 @@ function Editor() {
         <button id="sqrtindex-button">x√</button>
       </section>
       <section id="math-field"></section>
-    </div>
-  );
-}
+    </section>
+  </div>
+  )
+};
 
 export default Editor;
