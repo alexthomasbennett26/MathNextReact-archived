@@ -1,15 +1,19 @@
+import React, { Component } from 'react';
+
 import Editor from "./components/Editor";
 import Test from "./components/Testcomponent";
+import "./App.css";
 
-function App() {
-  return (
-    <div>
-      <h1>hello</h1>
-      <Editor text='first'/>
-      <Editor text='second'/>
-      <Test text='third'/>
-    </div>
-  );
-}
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Editor text="first" />
+        <Editor text="second" />
+        <Test text="third" />
+      </div>
+    );
+  }
+} 
 
 export default App;

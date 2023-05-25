@@ -10,7 +10,7 @@ const Test = (props) => {
     setModalIsOpen(true);
   }
 
-  function cancelHandler() {
+  function closeModalHandler() {
     setModalIsOpen(false);
   }
 
@@ -21,8 +21,8 @@ const Test = (props) => {
       <button className="new" onClick={newHandler}>
         Create New
       </button>
-      { modalIsOpen && <Modal /> }
-      { modalIsOpen && <Backdrop onCancel={cancelHandler} />}
+      { modalIsOpen && <Modal onCancel={closeModalHandler} onCofirm={closeModalHandler}/> }
+      { modalIsOpen && <Backdrop onCancel={closeModalHandler} />}
 
     </div>
   );
