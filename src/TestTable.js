@@ -1,18 +1,20 @@
 import React from "react";
 import Testrow from "./TestRow";
+import "./TestTable.css";
 
-const TestTable = (props) => {
+const TestTable = ({ tests }) => {
   return (
-    <div>
-      <Testrow />
-      <Testrow />
-      <Testrow />
-      <Testrow />
-      <Testrow />
-      <Testrow />
-      <Testrow />
-    </div>
-  );
-};
+    tests.map((user, i) => {
+      return (
+        <Testrow
+          key={i}
+          id={tests[i].id}
+          name={tests[i].name}
+          group={tests[i].group}
+          responses={tests[i].responses}
+        />
+      );
+}))};
+
 
 export default TestTable;
