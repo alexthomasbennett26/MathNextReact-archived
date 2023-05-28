@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import TestTable from "./TestTable";
-import Searchbox from "./Searchbox";
+import TestTable from "../components/TestTable";
+import Searchbox from "../components/Searchbox";
+import Scroll from "../components/Scroll"
 
 class App extends Component {
   constructor() {
@@ -44,7 +45,9 @@ class App extends Component {
           <h1>MathPrep</h1>
           <Searchbox searchChange={this.onSearchChange} />
           <button className="primary">Create Test</button>
-          <TestTable tests={filteredTests} />
+          <Scroll>
+            <TestTable tests={filteredTests} />
+          </Scroll>
         </div>
       );
     }
