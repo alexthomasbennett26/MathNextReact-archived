@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import TestTable from "../components/TestTable";
 import Searchbox from "../components/Searchbox";
-import Scroll from "../components/Scroll"
+import Scroll from "../components/Scroll";
+import ErrorBoundry from "./ErrorBoundry";
 
 class App extends Component {
   constructor() {
@@ -46,7 +47,9 @@ class App extends Component {
           <Searchbox searchChange={this.onSearchChange} />
           <button className="primary">Create Test</button>
           <Scroll>
-            <TestTable tests={filteredTests} />
+            <ErrorBoundry>
+              <TestTable tests={filteredTests} />
+            </ErrorBoundry>
           </Scroll>
         </div>
       );
