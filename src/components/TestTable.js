@@ -16,5 +16,6 @@ const TestTable = ({ tests }) => {
       );
 }))};
 
+// the above logic in overly complex to account for the search functionality we no longer have
 
 export default TestTable;

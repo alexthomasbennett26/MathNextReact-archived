@@ -1,0 +1,49 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+    background-color: inherit;
+}
+
+.modal-inner {
+  position: fixed;
+  border-radius: 2px;
+  padding: 32px;
+  text-align: left;
+  width: 100%;
+  max-width: 480px;
+  background-color: white;
+  z-index: 20;
+}
+
+.actions {
+  text-align: right;
+  background-color: inherit;
+}
+
+.modal-inner button {
+    background-color: #800040;
+    color: white;
+    width: 80px;
+}
+
+.modal-inner .close-button {
+  background-color: white;
+  color: black;
+  border: 1px black solid;
+}
+
+.modal-inner .create-button {
+    background-color: rgb(0, 58, 146);
+    color: white;
+    margin-left: 16px;
+  }

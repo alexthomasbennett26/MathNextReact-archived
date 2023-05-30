@@ -1,60 +1,24 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./App.css";
+import Modal from "../components/Modal";
 import TestTable from "../components/TestTable";
-import Searchbox from "../components/Searchbox";
-import Scroll from "../components/Scroll";
 import ErrorBoundry from "./ErrorBoundry";
+import { tests } from "../components/Tests";
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      tests: [],
-      searchfield: "",
-    };
-  }
+function App() {
+  
+  const [buttonModal, setButtonModal] = useState(false);
 
-  componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((users) => this.setState({ tests: users }));
-  }
-
-  onSearchChange = (event) => {
-    this.setState({ searchfield: event.target.value });
-  };
-
-  render() {
-    const filteredTests = this.state.tests.filter((test) => {
-      return test.name
-        .toLowerCase()
-        .includes(this.state.searchfield.toLowerCase());
-    });
-
-    if (this.state.tests.length === 0) {
-      return (
-        <div>
-          <h1>MathPrep</h1>
-          <Searchbox searchChange={this.onSearchChange} />
-          <button className="primary">Create Test</button>
-          <h1>Loading</h1>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <h1>MathPrep</h1>
-          <Searchbox searchChange={this.onSearchChange} />
-          <button className="primary">Create Test</button>
-          <Scroll>
-            <ErrorBoundry>
-              <TestTable tests={filteredTests} />
-            </ErrorBoundry>
-          </Scroll>
-        </div>
-      );
-    }
-  }
+  return (
+    <div>
+      <h1>MathPrep</h1>
+      <button onClick={() => setButtonModal(true)}>Create Test</button>
+      <Modal trigger={buttonModal} setTrigger={setButtonModal}></Modal>
+      <ErrorBoundry>
+        <TestTable tests={tests} />
+      </ErrorBoundry>
+    </div>
+  );
 }
 
 export default App;

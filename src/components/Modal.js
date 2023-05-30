@@ -1,25 +1,25 @@
-const Modal = (props) => {
-  function cancelHandler() {
-    props.onCancel();
-  }
-  function confirmHandler() {
-    props.onCofirm();
-  }
+import React from "react";
+import "./Modal.css";
 
-  return (
+function Modal(props) {
+  return props.trigger ? (
     <div className="modal">
-      <p>Create New Test</p>
-      <input type="text"></input>
-      <section className="actions">
-        <button type="submit" className="primarybutton" onClick={cancelHandler}>
-          Create
-        </button>
-        <button type="" className="tertiarybutton" onClick={confirmHandler}>
-          Cancel
-        </button>
-      </section>
+      <div className="modal-inner">
+        <h3>Create New Test</h3>
+        <input type="text"></input>
+        <section className="actions">
+          <button className="close-button" onClick={() => props.setTrigger(false)}>
+            Cancel
+          </button>
+          <button type="submit" className="create-button">
+            Create
+          </button>
+        </section>
+      </div>
     </div>
+  ) : (
+    ""
   );
-};
+}
 
 export default Modal;

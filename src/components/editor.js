@@ -9,7 +9,7 @@ const Editor = (props) => {
         <button id="pi-button">π</button>
         <button id="plus-button">+</button>
         <button id="minus-button">-</button>
-        <button id="multiply-button">x</button>
+        <button tid="multiply-button">x</button>
         <button id="divide-button">÷</button>
         <button id="lessthan-button">&lt;</button>
         <button id="greaterthan-button">&gt;</button>
